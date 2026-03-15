@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cart | Bookwormies</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="cart.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">Bookwormies</div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="store.html">Store</a>
+        <a href="contact.html">Contact</a>
+        <a href="about.html">About Us</a>
+        <a href="cart.html" class="active">Cart</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="cart-main">
+    <section class="cart-header">
+      <h1>Your Cart</h1>
+      <p>Here are the books you’ve added to your cart.</p>
+    </section>
+
+    <section class="cart-items" id="cart-items">
+      <!-- Items will be injected by JavaScript -->
+    </section>
+
+    <section class="cart-summary">
+      <h2>Total: ₹<span id="cart-total">0</span></h2>
+      <button id="checkout-btn" class="checkout-btn">Proceed to Checkout</button>
+    </section>
+  </main>
+
+  <!-- ✅ Checkout Modal -->
+  <div id="checkoutModal" class="modal">
+    <div class="modal-content">
+      <h2>Checkout Details</h2>
+      <form id="checkout-form">
+        <input type="text" placeholder="Country" required>
+        <input type="text" placeholder="Full Name" required>
+        <input type="tel" placeholder="Mobile Number" required>
+        <input type="text" placeholder="Flat, Building, Apartment" required>
+        <input type="text" placeholder="Street, Sector, Village" required>
+        <input type="text" placeholder="Pincode" required>
+        <input type="text" placeholder="City" required>
+        <input type="text" placeholder="State" required>
+        <select required>
+          <option value="">Select Payment Method</option>
+          <option value="COD">Cash on Delivery</option>
+          <option value="Card">Credit/Debit Card</option>
+          <option value="UPI">UPI</option>
+        </select>
+        <div class="modal-actions">
+          <button type="submit" class="submit-btn">Submit</button>
+          <button type="button" class="cancel-btn" onclick="closeModal()">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer_main">
+      <div class="tag1">
+        <h1>Bookwormies</h1>
+        <p>Your gateway to literary adventures.</p>
+      </div>
+      <div class="tag2">
+        <h2>Quick Links</h2>
+        <a href="index.html">Home</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="tag3">
+        <h2>Follow Us</h2>
+        <a href="https://www.instagram.com/pranjalpatil_44/">Instagram</a>
+      </div>
+      <div class="tag4">
+        <h2>Subscribe</h2>
+        <div class="search_bar">
+          <input type="text" placeholder="Your email" />
+          <button>Subscribe</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="cart.js"></script>
+</body>
+</html>
